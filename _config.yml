@@ -1,0 +1,68 @@
+# GitHub Pages Configuration
+title: John Master Pools
+description: Professional pool repairs, maintenance, and installations. Expert pool care services with quality workmanship and reliable service.
+url: "https://yourusername.github.io"
+baseurl: "/johnmasterpools"
+
+# SEO and Social Media
+author: John Master Pools
+email: info@johnmasterpools.com
+
+# Theme (GitHub Pages compatible)
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Include files
+include:
+  - _pages
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Build settings
+safe: true
+lsi: false
+incremental: false
